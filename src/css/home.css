@@ -1,0 +1,61 @@
+body
+{
+    background:linear-gradient(#040714, darkblue)no-repeat;
+    color:white;
+    height:100vh;
+}
+#root
+{
+    height:100%;
+}
+.home button
+{
+    font-size: 200%;
+    margin-top: 40vh;
+    background-color:rgba(0, 0, 0, 0);
+    padding: 2%;
+    border: solid rgba(255, 255, 255, 0.123);
+    box-shadow: 5px 5px 5px rgba(36, 216, 0, 0.301);
+    color: white;
+    transition: transform .2s;
+    -webkit-transition: transform .2s;
+    -moz-transition: transform .2s;
+    -ms-transition: transform .2s;
+    -o-transition: transform .2s;
+}
+.home button:hover
+{
+    background: white;
+    color: black;
+    transform: scale(1.5);
+}
+.team
+{
+    font-size: 200%;
+}
+.teamP
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.teamP p
+{
+    width: 40%;
+    margin: auto;
+    margin-bottom: 5%;
+    transition: transform .2s;
+}
+.teamP p:hover
+{
+    transform: scale(1.5);
+}
+.teamInput
+{
+    margin: auto;
+    margin-top: 10vh;
+    width: 50%;
+}
+.backButton button
+{
+    font-size: 50%;
+}

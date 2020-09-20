@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './component/Home';
+import Team from './component/Team';
+import TeamDetails from './component/TeamDetails';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+function NotFound(){
+  return(<div>
+    <p>Error 404 Page not found</p>
+      </div>)
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/teams" component={Team} />
+          <Route exact path="/teams/:id" component={TeamDetails} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
     </div>
   );
 }
